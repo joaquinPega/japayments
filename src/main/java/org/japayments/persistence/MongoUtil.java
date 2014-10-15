@@ -8,6 +8,8 @@ import java.net.UnknownHostException;
 
 
 
+import java.nio.file.FileSystems;
+
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
@@ -23,7 +25,7 @@ public class MongoUtil {
 			mongoClient = new MongoClient(System.getenv("OPENSHIFT_MONGODB_DB_HOST"),Integer.parseInt(System.getenv("OPENSHIFT_MONGODB_DB_PORT")));
 			//Simple-xml
 			Serializer serializer = new Persister();
-			File source = new File("../src/main/resources/example.xml");
+			File source = new File(FileSystems.getDefault().getPath("src/main/resources", "MongoData.xml").toString());
 			MongoData mongoData = serializer.read(MongoData.class, source);
 			this.db = mongoClient.getDB(mongoData.getDbName()); // test es la base de datos de pruebas
 			boolean auth= db.authenticate(mongoData.getDbUser(), mongoData.getDbPassword().toCharArray());
