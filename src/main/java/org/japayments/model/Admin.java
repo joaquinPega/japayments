@@ -1,18 +1,18 @@
 package org.japayments.model;
 
 public class Admin {
-	private String user;
+	private String userName;
 	private String password;
 	
 	public Admin() {
 	}
 
 	public String getUser() {
-		return user;
+		return userName;
 	}
 
-	public void setUser(String user) {
-		this.user = user;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {
