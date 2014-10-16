@@ -18,7 +18,7 @@ import com.mongodb.MongoClient;
 
 public class MongoUtil {
 	protected DB db;
-	private MongoClient mongoClient;
+	private MongoClient mongoClient=null;
 	@SuppressWarnings("deprecation")
 	protected void startOperation() throws DBFail{
 		try {
