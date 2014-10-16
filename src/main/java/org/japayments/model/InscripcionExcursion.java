@@ -1,5 +1,9 @@
 package org.japayments.model;
-
+/**
+ * 
+ * @author Joaquin Pega
+ *
+ */
 public class InscripcionExcursion {
 	private Alumno alumno;
 	private Excursion excursion;
