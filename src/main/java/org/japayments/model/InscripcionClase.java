@@ -6,12 +6,12 @@ import java.util.Calendar;
  * @author Joaquin Pega
  *
  */
-public class Inscripcion {
+public class InscripcionClase {
 	private Calendar date;
 	private Alumno alumno;
 	private Clase clase;
 	
-	public Inscripcion() {
+	public InscripcionClase() {
 	}
 
 	public Calendar getDate() {

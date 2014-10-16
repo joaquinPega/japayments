@@ -15,7 +15,11 @@ import org.simpleframework.xml.core.Persister;
 
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
-
+/**
+ * 
+ * @author Joaquin Pega
+ *
+ */
 public class MongoUtil {
 	protected DB db;
 	private MongoClient mongoClient=null;
